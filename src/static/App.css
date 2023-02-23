@@ -1,95 +1,117 @@
-/* estilos para el header */
+/* Estilos para el header /
+/ ======================= */
+
+/* Reset */
+
 *{
-  color:#333
-}
-body{
-  background: #fbb;
-}
-header {
+  color: #333;
+  box-sizing: border-box;
+  }
+  /* Body /
+  / ======================= */
+  body {
+  background: #faa;
+  }
+  
+  /* Header /
+  / ======================= */
+  header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   background-color: #333;
   color: #fff;
-  
+  z-index: 100;
   }
   
-#profile-link {
-  font-size: 20px;
+  #navbar {
+  display: flex;
+  flex-wrap: wrap;
+  }
+  
+  #profile-link {
+  font-size: 25px;
   font-weight: bold;
   text-decoration: none;
   color: #fff;
-}
+  }
   
-#navbar a {
+  #navbar a {
   margin-left: 20px;
   font-size: 18px;
   text-decoration: none;
   color: #fff;
-  position:sticky;
-  top:20px;
-}
+  }
   
-#navbar a:hover {
+  #navbar a:hover {
   text-decoration: underline;
-}
+  }
   
-  /* estilos para el main */
-main {
+  /* Estilos para el main /
+  / ======================= */
+  main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  }
   
-}
-  
-#welcome-section {
+  /* Welcome section /
+  / ======================= */
+  section {
+    height: 100vh;
+    min-height: 486px;
+    width: 100vw;
+  }
+  #welcome-section {
+  position: relative;
   height: 100vh;
   background-image: url("https://images.unsplash.com/photo-1601923354647-d69c20f1a7a9");
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#welcome-section h1 {
-  font-size: 40px;
-  color: #ddd;
+  }
+  
+  #welcome-section h1 {
+  font-size: 45px;
+  color: #ddf;
   text-shadow: 2px 2px #333;
-}
-#im{
+  }
+  
+  #im {
   display: flex;
   flex-direction: column;
   position: relative;
   bottom: 20%;
-}
-#im h1, h2{
+  text-align: center;
+  }
+  
+  #im h1 {
   margin: 5px;
   padding: 0;
+  }
+  
+  #im h2 {
+  font-size: 25px;
+  margin: 5px;
+  padding: 0;
+  }
+  
+#im h2 span {
+  color: #922;
 }
-#im h2{
-  font-size: 15px;
-  position: relative;
-  left:47%
-}
-#im h2 span{
-  color:#922
-}
-#projects {
-  margin-top: 50px;
-}
-.project-tile {
-  width: 300px;
-  height: 200px;
-  background-color: #eee;
+#about {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
 }
-.project-tile a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
+#about h2{
+  width: 100%;
 }
-.project-tile a:hover {
-  color: #999;
+#about p {
+
 }

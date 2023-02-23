@@ -1,10 +1,60 @@
-.button-project{
-    margin: 5px;
-    border:none;
-    cursor:pointer
+/* Projects /
+  / ======================= */
+#projects {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: top;
+    width: 100%;
 }
-.button-project:hover{
-    background: #575;
-    transition:0.5s
+.project-box{
+    width: 30%;
+    min-height: 200px;
+    margin: 0 15px;
+    transition: ease 0.05s;
+    border-radius: 20px;
 }
 
+.project-title {
+    width: auto;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:7px 7px 0 0;
+}
+
+
+.project-description{
+    background:#777;
+    transition: 1s;
+    margin: 0;
+    padding: 0px;
+}
+@media(max-width:1200px){
+    .project-box{
+        width:46%;
+    }
+}
+    
+    @media(max-width:786px){
+    .project-box{
+        width:100%;
+    }
+}
+
+
+.project-title button{
+    height: 100%;
+    width: 100%;
+    border-radius: 7px 7px 1px 1px;
+    background: #eee;
+    cursor:pointer;
+    border:none;
+}
+.project-title button:hover{
+    background: linear-gradient(#eee,90%,#f88) ;
+    border:1px solid black;
+    transition: 0.3 ease;
+}
