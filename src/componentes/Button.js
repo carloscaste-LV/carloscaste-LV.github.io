@@ -1,9 +1,8 @@
 import React from "react";
-import '../static/Project.css';
 
 
 
-class Project extends React.Component {
+class Button extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -17,4 +16,4 @@ class Project extends React.Component {
 }
 
 
-export default Project
+export default Button
