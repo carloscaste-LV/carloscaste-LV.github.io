@@ -1,0 +1,54 @@
+body {
+  user-select: none;
+  margin: 0;
+  background: var(--background-body);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body::-webkit-scrollbar 
+{
+    width: 12px;               /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track 
+{
+    background: var(--background-header);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb 
+{
+    background-color: var(--background-body);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 4px solid var(--background-header);  /* creates padding around scroll thumb */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1{
+  font-family: 'Times New Roman', Times, serif, fantasy;
+  color: var(--color-titles)
+}
+h2{
+  font-family: 'Times New Roman', Times, serif, fantasy;
+  color: var(--color-titles)
+}
+h3{
+  color: var(--color-titles)
+}
+p{
+  color: var(--color-content);
+}
+span{
+  color: rgb(100, 100, 160);
+  font-family: 'Caveat', cursive;
+}
+
+.row{
+  width: 100%;
+  margin-bottom: 5px;
+}
