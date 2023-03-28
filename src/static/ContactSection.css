@@ -5,8 +5,8 @@
 }
 
 #contact-box {
-    background: #fff;
-    border: 1px solid #ccc;
+    background: var(--background-body);
+    border: var(--border-color);
     border-radius: 15px;
 }
 #contact-info {
@@ -115,7 +115,7 @@
     padding: 10px 0;
     background: var(--background-header);
     color: var(--color-header);
-    border-radius: 15px 15px 0 0;
+    border-radius: 10px 10px 0 0;
 }
 #contact-box h3 {
     font-size: var(--subtitle-size);

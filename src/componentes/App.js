@@ -3,6 +3,7 @@ import '../static/App.css';
 import ContactSection from './ContactSection';
 import ProjectSection from './ProjectSection';
 import WelcomeSection from './WelcomeSection';
+import ButtonsTools from './ButtonsTools.js';
 
 class App extends React.Component{
   constructor(props){
@@ -10,6 +11,7 @@ class App extends React.Component{
   render(){
     return (
       <main>
+        <ButtonsTools/>
         <WelcomeSection/>
         <ProjectSection/>
         <ContactSection/>

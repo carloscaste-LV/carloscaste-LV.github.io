@@ -62,7 +62,7 @@ export default class ContactSection extends React.Component {
                     </div>
                     <div id="form-group">
                         <form onSubmit={this.handleSubmit}>
-                            <div class="row">
+                            <div className="row">
                                 <h3 className="contact-title ">SEND ME AN EMAIL</h3>
                                 <h4 className="contact-sub-title ">I'M VERY RESPOSIVE TO MESSAGES </h4>
                             </div>

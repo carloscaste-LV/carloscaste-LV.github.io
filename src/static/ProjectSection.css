@@ -1,7 +1,7 @@
 @import "colors.css";
 #project-section{
     --height-HeaderBottom:9%;
-    --border-color:1px solid #ddd;
+    
     
 }
 /* Projects /
@@ -78,7 +78,7 @@
     padding: 20px 20px 0px 20px;
     width: 100%;
     height: 82%;
-    background: #fff
+    background: var(--background-body)
 } 
 #project-description-text{
     
