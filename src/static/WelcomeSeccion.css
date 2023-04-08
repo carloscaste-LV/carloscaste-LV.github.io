@@ -56,7 +56,7 @@
 
 /* Estilos para el texto sobre el autor */
 #about {
-    background-color: var(--backgorund-body);
+    background: var(--background-content);
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;

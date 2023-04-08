@@ -6,11 +6,18 @@ import WelcomeSection from './WelcomeSection';
 import ButtonsTools from './ButtonsTools.js';
 
 class App extends React.Component{
-  constructor(props){
-    super(props);}
+  componentDidMount() {
+    window.scrollTo(0, 0);
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+  }
+
+
   render(){
+    
     return (
-      <main>
+      <main  >
         <ButtonsTools/>
         <WelcomeSection/>
         <ProjectSection/>

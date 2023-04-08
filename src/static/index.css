@@ -1,5 +1,5 @@
 body {
-  user-select: none;
+  user-select:none;
   margin: 0;
   background: var(--background-body);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -34,7 +34,7 @@ h1{
   color: var(--color-titles)
 }
 h2{
-  font-family: 'Times New Roman', Times, serif, fantasy;
+  font-family: 'Labrada', serif;
   color: var(--color-titles)
 }
 h3{
@@ -44,11 +44,27 @@ p{
   color: var(--color-content);
 }
 span{
-  color: rgb(100, 100, 160);
+  color: var(--span-color);
   font-family: 'Caveat', cursive;
 }
 
 .row{
   width: 100%;
   margin-bottom: 5px;
+}
+
+p,h2,h3,h4{
+  user-select:text ;
+}
+h4{
+  color:var(--color-titles)
+}
+.icon p{
+  user-select: none;
+}
+
+.highlights{
+  color:rgb(12, 122, 173);
+  font-family: 'Labrada', serif;
+  font-weight: 500;
 }

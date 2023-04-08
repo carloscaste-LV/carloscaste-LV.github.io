@@ -1,28 +1,11 @@
-import React from "react";
+import React ,{ useRef } from "react";
 import Button from "./Button";
 import '../static/ProjectSection.css';
 
 
 
-// const imgs = {
-//   img:[
-//     {
-//       label:"Lidar",
-//       imgFoot:"distance mapping from a static reference point",
-//       src:"../imgs/lyadar.png"
-//     },
-//     {
-//       label:"Hidroponía",
-//       imgFoot:"illustration created with dalle 2 of a hydroponic system",
-//       src:"../imgs/DALL·E 2023-02-26 21.41.25.png"
-//     },
-//     {
-//       label:"MedidorCo2",
-//       imgFoot:"A picture of a co2 sensor taken from google",
-//       src:"../imgs/scd41-co2-sensor-module-with-co2-temperature-and-humidity-sensor-pim587.jpg"
-//     }
-//   ]
-// }
+
+
 
 
 export default class sliceImg extends React.Component {
@@ -37,9 +20,17 @@ export default class sliceImg extends React.Component {
     
 
     setTimeout(() => {
-      document.getElementById(`circle-0`).classList.add("slide-selected");
+      const buttonSlideRight = document.querySelector('#rightButton');
+      buttonSlideRight.click();
+      
     }, 50);
+
+              
+        
+
+
   }
+  
   
   slideRight = () => {
     const projects = this.props.projects;
@@ -50,6 +41,11 @@ export default class sliceImg extends React.Component {
       const { projectNum } = this.state;
       const nextImgNum = (projectNum + 1) % projects.length;
 
+
+      // Scroll hasta el elemento con la barra de desplazamiento
+      const projectDescription = document.getElementById("project-description-text");
+      projectDescription.scrollTop = 0;
+
       //Animation slide project-description rigth
 
       document.getElementById("project-description-text").classList.add("slide-animation-right")
@@ -59,6 +55,7 @@ export default class sliceImg extends React.Component {
       document.getElementById(projects[projectNum].label).classList.remove("project-selected")
 
       setTimeout(() => {
+        
         this.setState({ img: projects[nextImgNum], projectNum: nextImgNum });
         document.getElementById(`circle-${projectNum}`).classList.remove("slide-selected");
         document.getElementById(`circle-${nextImgNum}`).classList.add("slide-selected");
@@ -80,6 +77,9 @@ export default class sliceImg extends React.Component {
 
       const { projectNum } = this.state;
       const nextImgNum = (projectNum - 1 + projects.length) % projects.length;
+
+      const projectDescription = document.getElementById("project-description-text");
+      projectDescription.scrollTop = 0;
 
       //Animation slide project-description rigth
 
@@ -105,13 +105,13 @@ export default class sliceImg extends React.Component {
   render() {
     const projects = this.props.projects;
     return (
-      <div id="slide">        
+      <div id="slide" >        
         <div id="project-selctor">
-          <Button className="buttonSlide" title={<i className="material-icons">chevron_left</i> } clickButton={this.slideLeft}/>
+          <Button buttonId="lefttButton" className="buttonSlide" title={<i className="material-icons">chevron_left</i> } clickButton={this.slideLeft}/>
             {projects.map((img,index) =>
               <div key={index} id={`circle-${index}`} className="slide-circles"></div>
             )}
-          <Button className="buttonSlide" title={<i className="material-icons">chevron_right</i>} clickButton={this.slideRight}/>
+          <Button buttonId="rightButton" className="buttonSlide" title={<i className="material-icons">chevron_right</i>} clickButton={this.slideRight}/>
         </div>
       </div>
     )
